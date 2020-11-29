@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { useWindowSize } from "@react-hook/window-size/throttled";
+import React from "react";
+//import { useWindowSize as useWindowSizeD } from "@react-hook/window-size/";
+//import useScrollPosition from "@react-hook/window-scroll";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [width, height] = useWindowSize({ fps: 60 });
+    //const [widthD, heightD] = useWindowSizeD();
+    //const scrollY = useScrollPosition(60 /*frames per second*/);
+
+    return (
+        <div className="App">
+            <iframe src="https://editor.p5js.org/richterzo/embed/tmX8UeKTq" width={width} height={height}/>
+        </div>
+    );
 }
 
 export default App;
