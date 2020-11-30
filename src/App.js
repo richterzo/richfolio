@@ -11,9 +11,7 @@ function App() {
     //const scrollY = useScrollPosition(60 /*frames per second*/);
 
     return (
-        <div className="App">
-            <iframe src="https://editor.p5js.org/richterzo/embed/tmX8UeKTq" width={width} height={height}/>
-        </div>
+        <iframe src="https://editor.p5js.org/richterzo/embed/tmX8UeKTq" width={width} height={height}/>
     );
 }
 
