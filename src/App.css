@@ -1,7 +1,3 @@
-#player{
-    position: fixed;
-    top: 60%;
-    left: 48%;
-    width: 100px;
-    height: 50px;
+#trigger{
+    display:none;
 }
