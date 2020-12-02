@@ -3,9 +3,9 @@ import { useWindowSize } from "@react-hook/window-size/throttled";
 import React from "react";
 //import { useWindowSize as useWindowSizeD } from "@react-hook/window-size/";
 //import useScrollPosition from "@react-hook/window-scroll";
-import Playlist from 'react-mp3-player';
-import track1 from "./assets/tracks/moody.mp3"
-
+import track1 from "./assets/tracks/moody.mp3";
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
 function App() {
     const [width, height] = useWindowSize({ fps: 60 });
@@ -19,7 +19,10 @@ function App() {
     return (
         <div>
             <iframe src="https://editor.p5js.org/richterzo/embed/tmX8UeKTq" width={width} height={height}/>
-            <Playlist tracks={tracks}/>
+            <AudioPlayer
+                autoPlay
+                src={track1}
+                onPlay={e => console.log("onPlay")}/>
         </div>
     );
 }
