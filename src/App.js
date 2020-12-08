@@ -8,14 +8,11 @@ import silence from "./assets/tracks/250-milliseconds-of-silence.mp3";
 
 function App() {
     const [width, height] = useWindowSize({ fps: 60 });
+
     //const [widthD, heightD] = useWindowSizeD();
     //const scrollY = useScrollPosition(60 /*frames per second*/);
     return (
         <div>
-            <iframe id="trigger" src={silence} allow="autoplay"/>
-            <audio id="trigger" autoPlay loop>
-                <source src={track1} type="audio/mp3"></source>
-            </audio>
             <iframe src="https://editor.p5js.org/richterzo/embed/tmX8UeKTq" width={width} height={height}/>
         </div>
     );
