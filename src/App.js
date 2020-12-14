@@ -8,17 +8,11 @@ import silence from "./assets/tracks/250-milliseconds-of-silence.mp3";
 
 function App() {
     const [width, height] = useWindowSize({ fps: 60 });
-    let audio = new Audio(track1);
-
-    const start = () => {
-        audio.play()
-    }
     //const [widthD, heightD] = useWindowSizeD();
     //const scrollY = useScrollPosition(60 /*frames per second*/);
     return (
         <div>
             <iframe src="https://editor.p5js.org/richterzo/embed/tmX8UeKTq" width={width} height={height}/>
-            <button onClick={start}>Play</button>
         </div>
     );
 }

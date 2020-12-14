@@ -9,9 +9,4 @@ html, body, div, object, iframe, fieldset {
     padding: 0;
     border: 0;
 }
-.button {
-    position: absolute;
-    left: 50%;
-    bottom: 50%;
-}
 
